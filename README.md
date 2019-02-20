@@ -1,2 +1,2 @@
 #Website Login
-Website: https://nicks9188.github.io/NicketaKumar/
+https://nicks9188.github.io/Nicketa/
