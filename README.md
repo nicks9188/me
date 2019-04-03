@@ -1,2 +1,2 @@
-# github.io
-https://nicks9188.github.io/Nicketa/
+# website
+https://nicks9188.github.io/github.io-self/
