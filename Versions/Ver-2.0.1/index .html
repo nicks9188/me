@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicketa Kumar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/Style-Other.css">
+<link rel="stylesheet" href="css/contact.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<link href="https://media.licdn.com/dms/image/C5103AQEa-R7XDzG0WA/profile-displayphoto-shrink_200_200/0?e=1559779200&v=beta&t=qCZ9KhWJCUCadRzYyjoVm-ynACi028nafroZ_ZaNC-Y" rel="shortcut icon"/>
+<style></style>
+</head>
+<body>
+	<div class="header-home">
+		<div id="row">
+			<!--Avatar Starts-->
+			<div id="column"><img src="img/IMG_20171124_010544534-copy.jpg" alt="Logo" class="avatar"></div>
+			<!--Avatar Ends-->
+			
+			<!--Name Header Starts-->
+			<div id="column-right">
+				<div class="header">
+				<h1>Nicketa Kumar</h1>
+				<p><b>DevOps</b><span> </span>Engineer</p>
+				<!--p>Location: Navi Mumbai, India</p-->
+				</div>
+			<!--Name Header Ends-->
+			</div>
+		</div>		
+	</div>
+	<div>
+		<!--Navigation Starts-->
+		<div class="navbar">
+			<a href="Index.html" class="active"><i class="fas fa-user"></i><span>  </span>About me</a>
+			<a href="pages/work.html"><i class="fas fa-mail-bulk"></i><span>  </span>Work Experience</a>
+			<a href="pages/project.html"><i class="fas fa-clipboard-check"></i><span>  </span>Project Details</a>
+			<a href="pages/general.html"><i class="fas fa-info-circle"></i><span>  </span>General Info</a>
+			
+			<a  href="#" onclick="document.getElementById('id01').style.display='block'" class="right">
+			<i class="far fa-hand-pointer"></i><span>  </span>Hire Me</a>
+			
+			<!--a href="pages/contact.html" class="right"><i class="far fa-hand-pointer"></i><span>  </span>Hire Me</a-->
+			
+			<div id="id01" class="modal">
+				
+				<div class="container1">
+					<h3 align="center">Get in touch</h3>
+					<br>
+					
+					<form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="nicks9188@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbx-sxqjOmCD5pGhLzzcI9Tc906bZN5VnNQQCe34/exec">
+					
+					<!--form action="../pages/thanks.html"-->
+						<!--label for="fname">Name</label-->
+						<input type="text" id="fname" name="name" placeholder="Your Name">
+
+						<!--label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your Last name"-->
+
+						<!--label for="email">Email</label-->
+						<input type="email" id="email" name="email" placeholder="Your email address">
+						
+						<br>
+						<!--label for="message-box">Message</label-->
+						<textarea id="message-box" name="message-box" placeholder="Your message..." style="height:200px"></textarea>
+						
+						<input type="submit" value="Submit"><span></span>
+						
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+						
+						<!-- Can customize the thankyou message by editing the code below -->
+						<!--div style="display:none" class="thankyou_message">
+							<h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+						</div-->
+						
+						
+					</form>
+				</div>
+			</div>
+			
+		</div>			
+		<!--Navigation Ends-->
+
+		<!--Rest Body section Starts-->
+		<div class="main">
+			<div class="hero-info pt-5">
+				<p><b>Hello</b> and <b>welcome</b> to my Page. My name is Nicketa and I’m a software engineer with hands-on experience in monitoring, supporting, automating over large infrastructure. Proficient with configuration management tools and developing CI/CD pipelines.</p>
+				<br>
+				<p>The companies I’ve worked for are: "Walmart", "Gilead Sciences" and "Ministry of Home Affairs, New Delhi". The tools on which I've worked in order to meet those requirements includes Jenkins administration, Atlassian tools (JIRA-Confluence) administration, Jenkins workflow management, Github administration, RAVE (EDC Services) account management etc. Project management tools include Atlassian Jira and Leankit. Ticketing tool includes Atlassian Jira, BMC Remedy and Service Now. Remote supporting tool incudes WebEx, Lync, remote desktop connection. Alert management tools were Nagios, and Xmatters.</p>
+				<br>
+				<p>In order to get in touch with me, please click on "Hire Me" button on the right. Thank you for showing interest in my profile.</p>
+			</div>
+				
+			<div align="right">
+				<!--p>I can also be found on:</p-->
+					
+				<!--Social Links Section Starts-->
+				<a href="https://github.com/nicks9188" target="blank"><i class="fab fa-github"></i></a>
+				<!--a href=""><i class="fa fa-pinterest"></i></a-->
+				<a href="https://www.linkedin.com/in/nicketa-prasad/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+				<!--	<a href=""><i class="fa fa-instagram"></i></a>
+				<a href=""><i class="fa fa-facebook"></i></a> -->
+				<a href="https://twitter.com/nickykumr" target="blank"><i class="fab fa-twitter"></i></a>
+				<!--Social Links Section Ends-->
+			</div>
+		</div>
+	</div>
+	<!--Rest Body section Ends-->
+	<!-- Footer section start -->
+	<footer class="footer-section">
+		<div class="container text-center">
+			<div class="copyright"><script>document.write(new Date().getFullYear());</script> All rights reserved &copy;<i class="fa fa-heart-o" aria-hidden="true"></i> by Nicketa
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+	<script>
+	// Get the modal
+		var modal = document.getElementById('id01');
+	</script>
+	<script>
+
+	// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+  
+</body>
+</html>
