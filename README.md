@@ -1,4 +1,4 @@
 Static Webpage
 
-https://nicks9188.github.io/github.io-self/
+https://nicks9188.github.io/me/
 
