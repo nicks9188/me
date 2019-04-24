@@ -104,11 +104,10 @@ body, html {
   font-size: 17px;
 }
 .list-tab {
-	padding:0px;
-	margin-left:80px;
-	font-size: 19px;
-	# color: #404040;
-	color: 000033;
+  padding:0px;
+  margin-left:80px;
+  font-size: 19px;
+  color: 000033;
 }
 
 .avatar {
