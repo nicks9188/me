@@ -70,6 +70,7 @@ body, html {
   background-color: #666;
   color: white;
 }
+
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
@@ -102,6 +103,13 @@ body, html {
   padding: 30px;
   font-size: 17px;
 }
+.list-tab {
+	padding:0px;
+	margin-left:80px;
+	font-size: 19px;
+	# color: #404040;
+	color: 000033;
+}
 
 .avatar {
   display: block;
@@ -114,6 +122,25 @@ body, html {
 .home-four-style .skills {
 	max-width: 555px;
 }
+
+/* Table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 50px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 
 /*---------------------
 	Footer section
