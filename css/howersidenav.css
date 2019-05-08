@@ -1,0 +1,53 @@
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -70px; /* Position them outside of the screen */
+  transition: 0.1s; /* Add transition on hover */
+  padding: 10px; /* padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 15px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 15px 15px 0; /* Rounded corners on the top left and bottom left side */
+  text-align:right;
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The linkedin link: 20px from the top with a color background */
+#linkedin {
+  top: 20px;
+  background-color: #0e76a8;
+}
+
+#github {
+  top: 80px;
+  background-color: #555
+}
+
+#twitter {
+  top: 140px;
+  background-color: #00acee;
+}
+
+#insta {
+  top: 200px;
+  background-color: #FF5733
+}
+
+#fb {
+  top: 260px;
+  background-color: #3b5998
+}
+
+/****************
+ to be included in html page
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="linkedin">LinkedIn</a>
+  <a href="#" id="github">Github</a>
+  <a href="#" id="twitter">Twitter</a>
+  <a href="#" id="insta">Instagram</a>
+  <a href="#" id="fb">facebook</a>
+</div>
+*****************/

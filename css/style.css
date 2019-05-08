@@ -30,6 +30,8 @@ body, html {
 .header {
   padding: 60px;
   text-align: center; 
+  margin-top: -45px;
+  margin-bottom: 30px;
 }
 
 /* Increase the font size of the heading */
