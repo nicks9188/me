@@ -1,13 +1,14 @@
 #mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -70px; /* Position them outside of the screen */
-  transition: 0.1s; /* Add transition on hover */
+  position: fixed; /* Position them relative to the browser window */
+  z-index: 1;
+  left: -90px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
   padding: 10px; /* padding */
-  width: 100px; /* Set a specific width */
+  width: 125px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
-  font-size: 15px; /* Increase font size */
+  font-size: 19px; /* Increase font size */
   color: white; /* White text color */
-  border-radius: 0 15px 15px 0; /* Rounded corners on the top left and bottom left side */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the top left and bottom left side */
   text-align:right;
 }
 
@@ -17,17 +18,17 @@
 
 /* The linkedin link: 20px from the top with a color background */
 #linkedin {
-  top: 20px;
+  top: 60px;
   background-color: #0e76a8;
 }
 
 #github {
-  top: 80px;
+  top: 110px;
   background-color: #555
 }
 
 #twitter {
-  top: 140px;
+  top: 160px;
   background-color: #00acee;
 }
 
