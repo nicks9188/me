@@ -1,215 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="resume, onepage, creative, html, aboutMe, Nicketa, cv, Curriculam">
-		
-		<!-- Stylesheets -->
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="../css/Style-Other.css">
-		<link rel="stylesheet" href="../css/contact.css">
-		<link rel="stylesheet" href="../css/howersidenav.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-		
-		<!-- Favicon -->
-		<link href="https://media.licdn.com/dms/image/C5103AQEa-R7XDzG0WA/profile-displayphoto-shrink_200_200/0?e=1559779200&v=beta&t=qCZ9KhWJCUCadRzYyjoVm-ynACi028nafroZ_ZaNC-Y" rel="shortcut icon"/>
-		
-		<title>Nicketa</title>
-	</head>
-	<body>
-		<div class="header-home">
-			<div id="row">
-				<!--Avatar Starts-->
-				<div id="column"><img src="../img/IMG_20171124_010544534-copy.jpg" alt="Logo" class="avatar"></div>
-				<!--Avatar Ends-->
-				<!--Name Header Starts-->
-				<div id="column-right">
-					<div class="header">
-						<h1>Nicketa</h1>
-						<p><b>Software</b><span> </span>Engineer</p>
-						<!--p>Location: Navi Mumbai, India</p-->
-					</div>
-					<!--Name Header Ends-->
-					<!--Hower side navigation-->
-					<div id="mySidenav" class="sidenav">
-					  <a href="https://www.linkedin.com/in/nicketak/" id="linkedin" target="blank">LinkedIn &nbsp;<i class="fab fa-linkedin-in"></i></a>
-					  <a href="https://github.com/nicks9188" target="blank" id="github">Github &nbsp;<i class="fab fa-github"></i></a>
-					  <a href="https://twitter.com/nickykumr" id="twitter" target="blank">Twitter &nbsp; <i class="fab fa-twitter"></i></a>
-					  <!--a href="#" id="insta">Instagram</a-->
-					  <!--a href="#" id="fb">facebook</a-->
-					</div>
-				</div>
-			</div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Nicketa Kumar">
+<!--Define keywords for search engines-->
+<meta name="keywords" content="About Me, Online CV, Resume, Online Resume, DevOps, JIRA, Atlassian">
+<!--Define a description of your web page-->
+<meta name="description" content="Online Resume">
+
+<!--Stylesheet-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Ubuntu&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="../css/howersidenav.css">
+<link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/body.css">
+
+<!-- Favicon -->
+<link href="https://media.licdn.com/dms/image/C5103AQEa-R7XDzG0WA/profile-displayphoto-shrink_200_200/0?e=1559779200&v=beta&t=qCZ9KhWJCUCadRzYyjoVm-ynACi028nafroZ_ZaNC-Y" rel="shortcut icon"/>
+
+<!--Google tag-->
+<meta name="google-site-verification" content="XSz2n7qz26-IXwUrLqQrKUsCQ3KOQPhV8cO8WSrZ3uI" />
+
+<title>Nicketa</title>
+
+</head>
+
+<style>
+#grad1 {
+  height: 200px;
+  background-image: linear-gradient(to right, darkcyan, white); /* Standard syntax (must be last) */
+}
+.general {
+    -ms-flex: 70%;
+    flex: 70%;
+    padding: 40px 0px;
+    font-size: 17px;
+	background-color:#ECF0F1;
+	height: 100%;
+	color: #34495E;
+}
+
+<!--Skills Section-->
+.outer {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.dm {width: 99%; background-color: #4CAF50; border-radius: 50px;}
+.tab {width: 80%; background-color: #2196F3; border-radius: 50px;}
+.py {width: 80%; background-color: #f44336; border-radius: 50px;}
+.spark {width: 70%; background-color: darkblue; border-radius: 50px;}
+.reg {width: 70%; background-color: darkcyan; border-radius: 50px;}
+.sas {width: 70%; background-color: #F56464; border-radius: 50px;}
+.r {width: 70%; background-color: #64F568; border-radius: 50px;}
+
+.rowg { display: flex; flex-wrap: wrap; margin: 0px 0px 0px 0px;} 
+
+.columng { 
+display: inline-block; 
+width: 40%;
+margin-left: 55px;
+margin-right: 55px;
+}
+.col-hobby { 
+display: inline-block;
+width: 15%;
+padding: 16px;
+margin-left: 5%;
+}
+#elementID {
+color: darkslateblue;
+text-shadow: 1px 1px 1px #ccc;
+font-size: 100px;
+}
+<!--Table-->
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #2E86C1;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #CFD6E1;
+}
+</style>
+
+<body>
+
+<!--Sidenav-->
+<div id="mySidenav" class="sidenav">
+  <a href="http://bit.ly/2WrxHfL" id="linkedin" target="blank"><i class="fab fa-linkedin-in"></i>&nbsp;&nbsp;&nbsp; LinkedIn</a>
+  <a href="http://bit.ly/2JZniER" target="blank" id="github"><i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp; Github</a>
+  <a href="http://bit.ly/2HTIjhu" id="twitter" target="blank"><i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp; Twitter</a>
+</div>
+
+<!--Top Nav-->
+<div class="topnav" id="myTopnav">
+  <a href="../index.html"><i class="fas fa-user"></i>&nbsp;&nbsp;About</a>
+  <a href="work.html"><i class="fas fa-mail-bulk"></i>&nbsp;&nbsp;Work-Exp</a>
+  <a href="project.html"><i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Portfolio</a>
+  <a href="general.html" class="active"><i class="fas fa-info-circle"></i>&nbsp; General</a>
+  <a href="contact.html"><i class="far fa-id-badge"></i>&nbsp; Contact</a>
+  </a>
+</div>
+
+<!--Header-->
+<div class="header-home">
+	<div id="row">
+		<!--Avatar Starts-->
+		<div id="column">
+			<img src="../img/IMG_20171124_010544534-copy.jpg" alt="Logo" class="avatar">
 		</div>
-		<div>
-			<!--Navigation Starts-->
-			<div class="navbar">
-				<a href="../index.html"><i class="fas fa-user"></i><span>  </span>About me</a>
-				<a href="../pages/work.html"><i class="fas fa-mail-bulk"></i><span>  </span>Work Experience</a>
-				<!--a href="../pages/project.html"><i class="fas fa-clipboard-check"></i><span>  </span>Project Details</a-->
-				<a href="../pages/general.html" class="active"><i class="fas fa-info-circle"></i><span>  </span>General Info</a>
-				<a  href="#" onclick="document.getElementById('id01').style.display='block'" class="right">
-				<i class="far fa-hand-pointer"></i><span>  </span>Hire Me</a>
-				<!--a href="../pages/contact.html" class="right"><i class="far fa-hand-pointer"></i><span>  </span>Hire Me</a-->
-				<div id="id01" class="modal">
-					<div class="container1">
-						<h3 align="center">Get in touch</h3>
-						<br>
-						<!--  for email server/script  -->
-						<form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="nicks9188@gmail.com"
-							action="https://script.google.com/macros/s/AKfycbx-sxqjOmCD5pGhLzzcI9Tc906bZN5VnNQQCe34/exec">
-						<!--form action="../pages/thanks.html"-->
-							<!--label for="fname">Name</label-->
-							<input type="text" id="fname" name="name" placeholder="Your Name" required>
-							<!--label for="email">Email</label-->
-							<input type="email" id="email" name="email" placeholder="Your email address" required>
-							<br>
-							<!--label for="message-box">Message</label-->
-							<textarea id="message-box" name="message-box" placeholder="Your message..." style="height:200px" required></textarea>
-							<input type="submit" value="Submit"><span></span>
-							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!--Navigation Ends-->
-			<!--Rest Body section Starts-->
-			<div class="main">
-				<div class="hero-info pt-5">
-					<h3><u>Personal Info</u>: </h3>
-					<br>
-					<ul>
-						<!--li><span>Date of Birth</span>May 26, 1988</li-->
-						<li><span>Location</span>Navi Mumbai, India</li>
-						<!--li><span>Marital Status</span>Married</li-->
-						<!--li><span>E-mail</span>mariawilliams@company.com</li>
-							<li><span>Phone </span>+43 5266 22 345</li-->
-					</ul>
-					<br><br>
-					<h3><u>Skills</u>: </h3>
-					<br>
-					<table>
-					<!--tr>
-						<th></th>
-						<th></th>
-					</tr-->
-					<tr>
-						<td><b>Continuous Integration tools:</b></td>
-						<td>Jenkins, Looper</td>
-					</tr>
-					<tr>
-						<td><b>Build Management tool:</b></td>
-						<td>Maven</td>
-					</tr>
-					<tr>
-						<td><b>Versioning Control:</b></td>
-						<td>Git, Github, Bitbucket</td>
-					</tr>
-					<tr>
-						<td><b>Orchestration :</b></td>
-						<td>Docker</td>
-					</tr>
-					<tr>
-						<td><b>Project Management :</b></td>
-						<td>JIRA, Teamforge, Leankit</td>
-					</tr>
-					<tr>
-						<td><b>Scripting Language :</b></td>
-						<td>Python</td>
-					</tr>
-					<tr>
-						<td><b>Operating System :</b></td>
-						<td>Windows/Unix/Linux/OSx</td>
-					</tr>
-				</table>
-					<!--ul>
-						<li><span>OS</span>Windows/Linux</li>
-						<li><span>Soft Skills</span>Python, Java, C/C++</li>
-						<li><span>Database</span>SQL, Postgree SQL</li>
-						<li><span>Tools</span>Git, Github, Jenkins, Docker, Maven, Jira, Confluence</li>
-					</ul-->
-					<br><br>
-					<h3><u>Academic</u>: </h3>
-					<br>
-					<ul>
-						<li>
-							<!--h2>2011</h2-->
-							<h4>Bachelor of Engineering (E.C.E)</h4>
-							<p>from <a href="https://www.rgpv.ac.in/" target="blank"><font color="SlateBlue">Rajive Gandhi Technical University (RGTU) Bhopal.<font></a></p>
-						</li>
-						<li>
-							<!--h2>2006</h2-->
-							<h4>10+2</h4>
-							<p>from C.B.S.E.</p>
-							<!--p></p-->
-						</li>
-						<br>
-					</ul>
-					<br>
-					<h3><u>Certification</u>: </h3>
-					<br>
-					<ul>
-						<li>
-							<p>Monitoring (Jenkins Admin - Fundamentals) by CloudBees, Inc <a href="https://verify.skilljar.com/c/fh8pis7872zy" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a></p>
-						</li>
-						<li>
-							<p>Medidata Rave® Certified Study Administrator <a href="https://www.slideshare.net/slideshow/embed_code/key/srTNKKD8d19oCf" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a></p>
-						</li>
-					</ul>
-					<br>
-				</div>
-				<br>
-				<!-- skill section start -->
-				<div class="skill-section">
-					<div class="section-title">
-						<h3><u>Hobbies</u></h3>
-					</div>
-					<!-- icon boxes -->
-					<div class="icon-box-area spad">
-						<div class="icon-box">
-							<i class="fas fa-camera-retro"></i>
-							<p>Photography</p>
-						</div>
-						<div class="icon-box">
-							<i class="fas fa-campground"></i>
-							<p>Camping in nature</p>
-						</div>
-						<div class="icon-box">
-							<i class="fas fa-headphones"></i>
-							<p>Listening Music</p>
-						</div>
-						<div class="icon-box">
-							<i class="fas fa-film"></i>
-							<p>Watching Movies</p>
-						</div>
-					</div>
-				</div>
-				<!-- skill section end -->
-			</div>
+		<!--Avatar Ends-->
+		<div id="column-right">
+	<div class="header">
+		<p class="logo-name">Nicketa</p>
+		<p class="name">SOFTWARE & ENGINEER</p>
 		</div>
-		<!--Rest Body section Ends-->
-		<!-- Footer section start -->
-		<footer class="footer-section">
-			<div class="container text-center">
-				<div class="copyright">
-					<script>document.write(new Date().getFullYear());</script> All rights reserved &copy; by Nicketa
-				</div>
+	</div>
+	</div>
+</div>
+
+<!--Rest Body-->
+<div class="general">
+	<div align="center" id="dark"><br>
+	
+	<h1><u>My Skills</u>&nbsp;&nbsp;<i class="fas fa-graduation-cap"></i></h1>
+	<br><br>
+	<table>
+  <tr>
+    <th>Functional Area</th>
+    <th>Tool</th>
+    
+  </tr>
+  <tr>
+    <td>CI / CD</td>
+    <td>Jenkins, Looper</td>
+    
+  </tr>
+  <tr>
+    <td>Version Control</td>
+    <td>Git, Github, Bitbucket, TFS</td>
+    
+  </tr>
+  <tr>
+    <td>Orchestration</td>
+    <td>Docker</td>
+    
+  </tr>
+  <tr>
+    <td>Build Management</td>
+    <td>Maven</td>
+    
+  </tr>
+  <tr>
+    <td>Project Management</td>
+    <td>JIRA, Confluence, Teamforge, Leankit</td>
+    
+  </tr>
+  <tr>
+    <td>Scripting Language</td>
+    <td>Shell Scripting</td>
+    
+  </tr>
+  <tr>
+    <td>Operating System</td>
+    <td>Windows/Unix/Linux</td>
+    
+  </tr>
+</table>
+	
+	<!-- Scale based --
+	<div class="rowg" align="left">
+		<div class="columng">
+			Data Mining Algorithm (Unsupervised & Supervised learning)
+			<div class="outer">
+			  <div class="skills dm">90%</div>
 			</div>
-		</footer>
-		<!-- Footer section end -->
-		<script>
-			// Get the modal
-				var modal = document.getElementById('id01');
-		</script>
-		<script>
-			// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-				}
-		</script>
-	</body>
-</html>
+		<br>
+		
+			Tablaue | Storytelling | Advance Charts
+			<div class="outer">
+			  <div class="skills tab">80%</div>
+			</div>
+		<br>
+		
+			Spark | Map Reduce | Hive | Mongo DB | GraphX
+			<div class="outer">
+			  <div class="skills spark">70%</div>
+			</div>
+			<br>
+		
+		SQL | SAS Base, Advance | Data lakes
+			<div class="outer">
+			  <div class="skills sas">70%</div>
+			</div>
+		
+		</div>
+		
+		<div class="columng">
+		
+			Python | Pandas | Numpy | PySpark | SQL Content
+			<div class="outer">
+			  <div class="skills py">80%</div>
+			</div>
+		<br>
+
+			Regressions(linear & multiple) & Neural Network models
+			<div class="outer">
+			  <div class="skills reg">70%</div>
+			</div>
+			<br>
+			
+			R | Shiny app
+			<div class="outer">
+			  <div class="skills r">70%</div>
+			</div>
+			<br>
+		</div>
+	</div>
+	-->
+	<br>
+	
+	</div>
+	<br>
+	<div align="center" id="light">
+	<br><br>
+	<h1><u>Certifications</u>&nbsp;&nbsp;<i class="fas fa-award"></i></h1>
+	<br>
+	Monitoring (Jenkins Admin - Fundamentals) by CloudBees, Inc <a href="https://verify.skilljar.com/c/fh8pis7872zy" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a>
+	<br><br>
+	Medidata Rave® Certified Study Administrator <a href="https://www.slideshare.net/slideshow/embed_code/key/srTNKKD8d19oCf" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a>
+	<br><br><br>
+	<br>
+	</div>
+	<br>
+	<div align="center" id="dark">
+	<br>
+	<h1><u>Academics</u>&nbsp;&nbsp;<i class="fas fa-user-graduate"></i></h1>
+	<br><br>
+	<table>
+  <tr>
+    <th>Education</th>
+    <th>University</th>
+    
+  </tr>
+  <tr>
+    <td>Bachelor of Engineering (E.C.E)</td>
+    <td><a href="https://www.rgpv.ac.in/" target="blank"><font color="SlateBlue">Rajive Gandhi Technical University (RGTU) Bhopal.<font></a></td>
+    
+  </tr>
+  <tr>
+    <td>10+2</td>
+    <td>C.B.S.E. New Delhi</td>
+    
+  </tr>
+</table>
+<br>
+	</div>
+	<br>
+	<div align="center" id="light">
+	<br><br>
+	<h1><u>Personal Info</u>&nbsp;&nbsp;<i class="fas fa-user-edit"></i></h1><br>
+	<strong>Location:</strong>&nbsp;&nbsp;&nbsp;Navi Mumbai, India.
+	<br><br><br>
+	</div>
+	<br>
+	<div align="center" id="dark">
+	<br>
+	<h1><u>Hobbies</u>&nbsp;&nbsp;<i class="fab fa-earlybirds"></i></h1>
+	<br><br>
+	<div class="rowg">
+		<div class="col-hobby">
+		<i class="fas fa-film" id="elementID"></i><br><br>
+			<strong>Watching Movies</strong>
+		</div>
+		<div class="col-hobby">
+			<i class="fas fa-camera-retro" id="elementID"></i><br><br>
+			<strong>Photography</strong>
+		</div>
+		<div class="col-hobby">
+			<i class="fas fa-hiking" id="elementID"></i>&nbsp;<i class="fas fa-tree" id="elementID"></i><br><br>
+			<strong>Wandering in Nature</strong>
+		</div>
+		<div class="col-hobby">
+			<i class="fas fa-headphones-alt" id="elementID"></i><br><br>
+			<strong>Listening Music</strong>
+		</div>
+	</div>
+	<br>
+	</div>
+	<br>
+	<div align="center" id="light">
+	
+	</div>
+</div>
+<!--Footer-->
+<footer>
+<div class="text-align: center!important;" style="padding: 100px;margin-left: 30%;margin-right 30%: ;">Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved</i> by &nbsp;&nbsp;<i class="fas fa-heartbeat"></i>&nbsp;&nbsp;<a href="#" target="_blank" style="color:white;">Nicketa</a></div>
+</footer>
+</body>
+</html> 
