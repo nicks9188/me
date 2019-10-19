@@ -116,7 +116,7 @@ tr:nth-child(even) {
   <a href="project.html"><i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Portfolio</a>
   <a href="general.html" class="active"><i class="fas fa-info-circle"></i>&nbsp; General</a>
   <a href="contact.html"><i class="far fa-id-badge"></i>&nbsp; Contact</a>
-  </a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
 </div>
 
 <!--Header-->
@@ -313,5 +313,15 @@ tr:nth-child(even) {
 <footer>
 <div class="text-align: center!important;" style="padding: 100px;margin-left: 30%;margin-right 30%: ;">Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved</i> by &nbsp;&nbsp;<i class="fas fa-heartbeat"></i>&nbsp;&nbsp;<a href="#" target="_blank" style="color:white;">Nicketa</a></div>
 </footer>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 </body>
 </html> 
