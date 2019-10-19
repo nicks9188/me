@@ -18,27 +18,27 @@
 }
 
 #linkedin {
-    top: 100px;
+    top: 200px;
     background-color: #0e76a8;
 }
 
 #github {
-    top: 160px;
+    top: 260px;
     background-color: #555;
 }
 
 #twitter {
-    top: 220px;
+    top: 320px;
     background-color: #00acee;
 }
 
-#insta {
-    top: 280px;
-    background-color: rgb(244, 67, 54);
+#facebook {
+    top: 380px;
+    background-color: #3b5998;
 }
 
 #download {
-  top: 340px;
+  top: 440px;
   background-color: #555
 }
 

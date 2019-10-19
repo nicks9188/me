@@ -127,6 +127,7 @@ width: 50%;
   <a href="http://bit.ly/2WrxHfL" id="linkedin" target="blank"><i class="fab fa-linkedin-in"></i>&nbsp;&nbsp;&nbsp; LinkedIn</a>
   <a href="http://bit.ly/2JZniER" target="blank" id="github"><i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp; Github</a>
   <a href="http://bit.ly/2HTIjhu" id="twitter" target="blank"><i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp; Twitter</a>
+  <a href="https://www.facebook.com/CAPINCAM/" id="facebook" target="blank"><i class="fab fa-facebook"></i>&nbsp;&nbsp;&nbsp; Facebook</a>
 </div>
 
 <!--Top Nav-->
@@ -136,24 +137,23 @@ width: 50%;
   <a href="project.html"><i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Portfolio</a>
   <a href="general.html"><i class="fas fa-info-circle"></i>&nbsp; General</a>
   <a href="contact.html" class="active"><i class="far fa-id-badge"></i>&nbsp; Contact</a>
-  </a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
 </div>
 
 <!--Rest Body-->
 <div class="main">
 	<div class="rowc">
 		<div class="columnc">
-			<img src="../img/clem-onojeghuo-210707-unsplash - Copy.jpg" height="700px" width="600px" alt="contact">
+			<img src="../img/IMG_20190903_204630 - Copy.jpg" height="700px" width="600px" alt="contact">
 		</div>
-		<div class="columnc">
+		<div class="columnc"><br><br>
 		<h1 align="center">Get in touch</h1>
 			<div class="container">
 			<form onsubmit="confirmInput()" method="post" id="gform" class="pure-form pure-form-stacked" data-email="nicks9188@gmail.com" action="https://script.google.com/macros/s/AKfycbx-sxqjOmCD5pGhLzzcI9Tc906bZN5VnNQQCe34/exec">
 			
 			
 			
-			<input type="text" id="fname" name="firstname" placeholder="Your First name" required />
-			<input type="text" id="lname" name="lastname" placeholder="Your Last name" />
+			<input type="text" id="fname" name="firstname" placeholder="Your name" required />
 			<input type="email" id="email" name="email" placeholder="Your email address" required />
 			<textarea id="message-box" name="message-box" placeholder="Your message..." style="height:200px" required></textarea>
 			<input type="submit" value="Submit"><span></span>
@@ -168,5 +168,15 @@ width: 50%;
 <div class="text-align: center!important;" style="padding: 100px;margin-left: 30%;margin-right 30%: ;">Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved</i> by &nbsp;&nbsp;<i class="fas fa-heartbeat"></i>&nbsp;&nbsp;<a href="#" target="_blank" style="color:white;">Nicketa</a></div>
 </footer>
 <script data-cfasync="false" type="text/javascript" src="../script/form-submission-handler.js"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 </body>
 </html> 
