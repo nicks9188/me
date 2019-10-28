@@ -100,6 +100,8 @@
 <!--Footer-->
 <footer>
 <div class="text-align: center!important;" style="padding: 100px;margin-left: 30%;margin-right 30%: ;">Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved</i> by &nbsp;&nbsp;<i class="fas fa-heartbeat"></i>&nbsp;&nbsp;<a href="#" target="_blank" style="color:white;">Nicketa</a></div>
+<!--Page Visit Counter-->
+<span> </span>
 </footer>
 <script>
 function myFunction() {
@@ -110,6 +112,17 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+</script>
+<!--Page Visit Counter-->
+<script> 
+            function counter_fn(){
+                var counter = $('#cntr span').text(); // geting value from span
+                var count = 0;
+                count = parseInt(counter.value);
+                count = count+1;
+                counter.innerHTML = parseInt(count);
+           }
+           window.onload = counter_fn;  
 </script>
 </body>
 </html> 
