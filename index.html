@@ -2,139 +2,382 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Nicketa Kumar">
-<!--Define keywords for search engines-->
-<meta name="keywords" content="About Me, Online CV, Resume, Online Resume, DevOps, JIRA, Atlassian">
-<!--Define a description of your web page-->
-<meta name="description" content="Online Resume">
-
-<!--Open Graph Tags-->
-<meta property="og:nky" content="Nicketa"/>
-<meta property="og:title" content="Software Engineer"/>
-<meta property="og:description" content="I’m an IT professional with hands-on experience in offshore application management, maintenance, monitoring, automating over large infrastructure on technologies like Jira and Confluence for project management, Jenkins for build management, Github for source-code management, Maven for CI/CD"/>
-<meta property="og:image" content="img/icon.ico">
-<meta property="og:url" content="https://nicks9188.github.io/me/">
-<meta property="og:type" content="About Me"/>
-<!--Open Graph Tags: https://cypressnorth.com/social-media-marketing/how-to-customize-preview-thumbnail-images-for-pages-on-your-website/-->
-
-<!--Stylesheet-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Ubuntu&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-<link rel="stylesheet" href="css/howersidenav.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/body.css">
-
-<!-- Favicon -->
-<link href="img/icon.ico" rel="shortcut icon"/>
-
-<!--Google tag-->
-<meta name="google-site-verification" content="XSz2n7qz26-IXwUrLqQrKUsCQ3KOQPhV8cO8WSrZ3uI" />
-
-<title>Nicketa</title>
-
+<link href="assests/images/icon.ico" rel="shortcut icon">
+<title>Nicketa-CV</title>
+<link rel="stylesheet" href="assests/stylesheet/style.css">
+<link rel="stylesheet" href="assests/stylesheet/writing.css">
+<link rel="stylesheet" href="assests/stylesheet/timeline.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!--Sidenav-->
-<div id="mySidenav" class="sidenav">
-  <a href="http://bit.ly/2WrxHfL" id="linkedin" target="blank"><i class="fab fa-linkedin-in"></i>&nbsp;&nbsp;&nbsp; LinkedIn</a>
-  <a href="http://bit.ly/2JZniER" target="blank" id="github"><i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp; Github</a>
-  <a href="http://bit.ly/2HTIjhu" id="twitter" target="blank"><i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp; Twitter</a>
-  <a href="https://www.facebook.com/CAPINCAM/" id="facebook" target="blank"><i class="fab fa-facebook"></i>&nbsp;&nbsp;&nbsp; Facebook</a>
+<div class="header" style="text-align:left">
+  <p>Hello, my name is</p>
+  <h2 style="font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));color:white;">Nicketa</h2>
+  <p style="color: white;">An enthusiastic learner | Agile Expert</p>
+  <p style="color: white;">Focused to lead with a deeper purpose and Empathy</p>
 </div>
 
-<!--Top Nav-->
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active"><i class="fas fa-user"></i>&nbsp;&nbsp;About</a>
-  <a href="pages/work.html"><i class="fas fa-mail-bulk"></i>&nbsp;&nbsp;Work-Exp</a>
-  <a href="pages/project.html"><i class="fas fa-project-diagram"></i>&nbsp;&nbsp;Portfolio</a>
-  <a href="pages/general.html"><i class="fas fa-info-circle"></i>&nbsp; General</a>
-  <a href="pages/contact.html"><i class="far fa-id-badge"></i>&nbsp; Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+<div id="navbar">
+    <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+	<a href="#about"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;About</a>
+	<a href="#workexp"><i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;WorkExp</a>
+	<a href="#portfolio"><i class="fa fa-th-list"></i>&nbsp;&nbsp;Portfolio</a>
+	<a href="https://github.com/nicks9188" target="blank"><i class="fa-brands fa-github-alt"></i>&nbsp;&nbsp;Github</a>
+	<a href="https://www.linkedin.com/in/nicketak/" target="blank" id="linkedin"><i class="fa-brands fa-linkedin-in"></i>&nbsp;&nbsp;LinkedIn</a>
+    <a href="https://www.youtube.com/@techienicks" target="blank"><i class="fa-brands fa-youtube"></i>&nbsp;&nbsp;YouTube</a>
 </div>
 
-<!--Header-->
-<div class="header-home">
-	<div id="row">
-		<!--Avatar Starts-->
-		<div id="column">
-			<img src="img/IMG_20171124_010544534-copy.jpg" alt="Logo" class="avatar">
+<div class="newspaper-container" id="about">
+  <h1>Welcome&nbsp;&nbsp;<i class="fa-solid fa-face-smile"></i></h1>
+  
+  <!--Greetings-->
+  <div class="newspaper-text">
+	<p>My name is Nicketa and currently I'm currently working as Technical Manager with Capgemini.</p>
+	<p>For latest profile updates, kindly checkout my <a href="#linkedin">linkedin</a> tab above.</p>
+  </div>
+  
+  
+  <div class="skills-container">
+    <section class="section left">
+		<div class="newspaper-text">
+			<p>I’m an IT professional with hands-on experience in offshore application management, maintenance, monitoring, automating over large infrastructure on technologies like Jira and Confluence for project management, Jenkins for build management, Github for source-code management, Maven for CI/CD, .</p>
+			  <p>As a Jira Administrator:</p>
+			  <ul>
+				<li>I've Created projects/workspace.</li>
+				<li>Administered Jira and Confluence (server-side).</li>
+				<li>Created and managed Jira workflows/ Issue fields / Custom field / Dashboard management, etc.</li>
+				<li>Technical documentation for maintenance, training and development purpose of the team over Confluence.</li>
+				<li>Performing weekly checkouts of the application followed by system reindexing.</li>
+			  </ul>
+			  <p>As a DevOps engineer:</p>
+			  <ul>
+				<li>I've been fixing build related issues.</li>
+				<li>Administratering tools Jenkins/Github/JIRa/Confluence.</li>
+				<li>Installing and Integrating applications.</li>
+				<li>Configuring slave machine in Jenkins.</li>
+				<li>Managing permissions on Jenkins.</li>
+			  </ul>
+			  <p>
+				I,ve also done Technical Documentation for trainig and development purpose of the team.
+				I've basic knowledge of SQL, Nodejs, JavaScript, REST-API and Python. I like to experiment on my own, so keep looking in portfolio tab.
+				People find me to be an upbeat, self-motivated team player with excellent communication skills. My current experience is as a Technical lead in Agile Team. Earlier, I've worked as a DevOPS administrator and in backend meeting end-to-end business requirements. Love to learn things quickly, enjoy collaborating with team and constantly upgrading my knowledgebase to strengthened my technical skill set.
+				For more details on my experience, please refer to work experience tab. In order to get in touch with me, please click on "Contact" tab and drop your message. For my other social profiles, click on icons on the top right. Thank you for showing interest in my profile. Have a great day ahead!!!
+		  </p>
 		</div>
-		<!--Avatar Ends-->
-		<div id="column-right">
-	<div class="header">
-		<p class="logo-name">Nicketa</p>
-		<p class="name">An enthusiastic learner</p>
-		<p class="name">Focused to lead with a deeper purpose and Empathy</p>
-		<p class="name">Agile Expert | Transforming Teams at Capgemini</p>
+    </section>
+
+    <section class="section right">
+	<!--Skills-->
+		<h2><u>My Skills</u>&nbsp;&nbsp;<i class="fas fa-graduation-cap"></i></h2>
+		<br><br>
+		<div class="table-container">
+		<table>
+			  <tr>
+				<th>Functional Area</th>
+				<th>Tool</th>
+				
+			  </tr>
+			  <tr>
+				<td>Project Management</td>
+				<td>JIRA, Confluence, Leankit</td>   
+			  </tr>
+			  <tr>
+				<td>Version Control</td>
+				<td>Git, Github</td>
+				
+			  </tr>
+			  <tr>
+				<td>Orchestration</td>
+				<td>Docker</td>
+				
+			  </tr>
+			  <tr>
+				<td>Build Management</td>
+				<td>Maven</td>
+				
+			  </tr>
+			  <tr>
+				<td>CI / CD</td>
+				<td>Jenkins, Looper</td>    
+			  </tr>
+			  <tr>
+				<td>Scripting Language</td>
+				<td>Shell Scripting</td>
+				
+			  </tr>
+			  <tr>
+				<td>Operating System</td>
+				<td>Windows/Unix/Linux</td>
+				
+			  </tr>
+			</table>
 		</div>
+		<!--Certifications-->
+		<br><br>
+		<h2><u>Certifications</u>&nbsp;&nbsp;<i class="fas fa-award"></i></h2>
+		<br>
+		<ul>
+			<li><a href="https://execed.isb.edu/en/individual-programmes/comprehensive-leadership-programmes/women-s-leadership-program-/overview.html" target="blank">Women’s Leadership Programme</a> from <a href="https://www.isb.edu/en.html" target="blank">Indian School of Business (ISB)</a> <a href="https://www.linkedin.com/in/nicketak/overlay/1725955153705/single-media-viewer/?profileId=ACoAAAtMFXkBVdf3R9R7MmyuUHXn-VuZ0vaFFA4" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a></li>
+			<li>Monitoring (Jenkins Admin - Fundamentals) by CloudBees, Inc <a href="https://verify.skilljar.com/c/fh8pis7872zy" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a>
+			<li>Medidata Rave® Certified Study Administrator <a href="https://www.slideshare.net/slideshow/embed_code/key/srTNKKD8d19oCf" target="blank"><font color="SlateBlue" size="3px">(view certificate)</font></a></li>
+		</ul>
+		<br><br>
+		<!--Academics-->
+		<h1><u>Academics</u>&nbsp;&nbsp;<i class="fas fa-user-graduate"></i></h1>
+		<br><br>
+		<div class="table-container">
+		<table>
+		  <tr>
+			<th>Education</th>
+			<th>University</th>
+			
+		  </tr>
+		  <tr>
+			<td>Bachelor of Engineering (E.C.E)</td>
+			<td><a href="https://www.rgpv.ac.in/" target="blank"><font color="SlateBlue">Rajive Gandhi Technical University (RGTU) Bhopal.<font></a></td>
+			
+		  </tr>
+		  <tr>
+			<td>10+2</td>
+			<td>C.B.S.E. New Delhi</td>
+			
+		  </tr>
+		</table>
 	</div>
 	</div>
+    </section>
+</div>
 </div>
 
-<!--Rest Body-->
-<div class="main">
-	<div>
-	<p>WELCOME</p>
-	<h1>My name is <strong>Nicketa</strong> and currently I'm currently working as Manager with Capgemini. <i class="fas fa-user-secret"></i></h1>
-	<br>
-
-	<p>For latest profile updates, kindly checkout my linkedin tab on the right -></p>
-	<p>I’m an IT professional with hands-on experience in offshore application management, maintenance, monitoring, automating over large infrastructure on technologies like Jira and Confluence for project management, Jenkins for build management, Github for source-code management, Maven for CI/CD, .</p>
-	
-	<p>As a Jira Administrator:</p>
+<div class="newspaper-container" id="workexp">
+  <h1>Work Experience&nbsp;&nbsp;<i class="fa-solid fa-wand-magic-sparkles"></i></h1>
+  <p>In reverse chronological order.</p>
+  <div class="newspaper-container">
+	<div class="timeline">
+  <div class="container right">
+    <div class="content">
+      <div class="newspaper-text">
+	  <h3>(2019 – Current*)</h3>
+	  <h1>* <a href="https://www.capgemini.com/" target="blank">Capgemini</a></h1>
+	  <div class="timeline" style="z-index:auto;">
+		<ul>
+			<li>Sep 2019 - Sep 2020: Technical Manager</li>
+			<li>Sep 2019 - Sep 2020: Senior Consultant</li>
+			<li>Sep 2019 - Sep 2020: Consultant</li>
+		</ul>	
+	  </div>
+	  
 	<ul>
-		<li>I've Created projects/workspace.</li>
-		<li>Administered Jira and Confluence (server-side).</li>
-		<li>Created and managed Jira workflows/ Issue fields / Custom field / Dashboard management, etc.</li>
-		<li>Technical documentation for maintenance, training and development purpose of the team over Confluence.</li>
-		<li>Performing weekly checkouts of the application followed by system reindexing.</li>
+		<li>Creating and managing Jira Projects over Jira and Confluence.</li>
+		<li>Administration Jira, Confluence.</li>
+		<li>Integration with other tools.</li>
+		<li>Installation and upgradation of plugins.</li>
+		<li>User / Permission management in JIRA and Confluence.</li>
+		<li>Creating Workflow, Status, Issue type, workflow management and Custom field in JIRA.</li>
+		<li>User / Permission management in JIRA/Fisheye/Bitbucket/Confluence.</li>
+		<li>Technical documentation for training and development purpose of the team in Confluence.</li>
+		<li>Performing weekly checkouts of the JIRA\Confluence application followed by system indexing.</li>
 	</ul>
-	
-	<p>As a DevOps engineer:</p>
-	<ul>
-		<li>I've been fixing build related issues.</li>
-		<li>Administratering tools Jenkins/Github/JIRa/Confluence.</li>
-		<li>Installing and Integrating applications.</li>
-		<li>Configuring slave machine in Jenkins.</li>
-		<li>Managing permissions on Jenkins.</li>
-		<li>I,ve also done Technical Documentation for trainig and development purpose of the team.</li>
-	</ul>
-	
-	<p>I've basic knowledge of SQL, Nodejs, JavaScript, REST-API and Python. I like to experiment on my own, so keep looking in <a href="pages/project.html">portfolio</a> tab.</p>
+		<br>
+		<p><b>Technologies worked on</b>: JIRA, Confluence, Linux, Github and Shell Scripting.</p>
+  </div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+		<div class="newspaper-text">
+			<h3>(2016-2018)</h3>
+			<h1><a href="https://www.linkedin.com/company/indegenewincere/about/" target="blank"><font color="SlateBlue">Software Business Solution and Consulting</font></a></h1>
+			<h4>as a Software Engineer</h4>
+			<br>
+			<div class="list-tab">
+				<ul>
+					<li>Fixing issues with release builds related to Configuration.</li>
+					<li>Wrote pipeline jobs for Jenkins Maintenance.</li>
+					<li>Administration of Jenkins, GIT, Jira, Confluence.</li>
+					<li>Installed and upgraded plugins on Jenkins.</li>
+					<li>Configuring java, maven, git, ant on Jenkins/ slave machine.</li>
+					<li>Configuring slave machines on Jenkins.</li>
+					<li>User / Permission management in JIRA/Fisheye/Bitbucket/Confluence.</li>
+					<li>Creating project, Issue type, workflow management and custom field in JIRA.</li>
+					<li>Technical documentation for training and development purpose of the team and creating workspace upon request in Confluence.</li>
+					<li>Performing weekly checkouts of the JIRA\Confluence application followed by system indexing.</li>
+					<li>Making sure that application should be up. In case application is going down, Bringing the application online and performing RCA</li>
+					<li>Troubleshooting login issue and managing permission for user in JIRA/Bitbucket/Confluence.</li>
+					<li>Worked on ticketing tools – BMC Remedy and Servicenow</li>
+				</ul>
+			</div>
+			<p><b>Technologies worked on:</b>Jenkins, Looper, git, Github, Nexus, maven, SonarQube, Bitbucket, JIRA, Confluence, fisheye.</p>
+		</div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+		<div class="newspaper-text">
+		<h3>(2013-2016)</h3>
+			<h1><a href="https://www.linkedin.com/company/indegenewincere/about/" target="blank"><font color="SlateBlue">Wincere Inc (now Indegene Wincere)</font></a></h1>
+				
+				<h4>as Software Engineer- Technical Support</h4>
+				<br>
+				<div class="list-tab">
+					<ul>
+						<li>User account/Critical data management on their web based GUI called RAVE.</li>
+						<li>Site management (changing of PI (primary investigator) for multiple medical studies).</li>
+						<li>Atlassian JIRA as a project management and ticketing tool.</li>
+						<li>Email based communication, creating tickets based on that using ticketing tool (Atlassian JIRA) and follow up until closure.</li>
+						<li>Documenting process updates.</li>
+						<br>
+						<p><b>Technologies worked on</b>: Rave, JIRA, Confluence.</p>
+					</ul>
+				</div>
+		</div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+		<div class="newspaper-text">
+			<h3>(2012-2013)</h3>
+			<h1>Innovative Websoft Solutions Pvt. Ltd</h1>
+				
+				<h4>as Technical Support Engineer</h4>
+				<br>
+				<div class="list-tab">
+					<ul>
+						<li>To detect, identify and troubleshoot system software and tool problems.</li>
+						<li>User account management on web based portal.</li>
+						<li>To enable functionality and availability.</li>
+						<li>In this project, all details of members were stored in the database. Record like Profile, Loan, and Transaction stored at different conditions, updated and modified as per requirement.</li>
+						
+						<br>
+						<p><b>Technologies worked on</b>: Microsoft SQL, Web based GUI.</p>
+					</ul>
+				</div>
+		</div>
+    </div>
+  </div>
+  <!--Below is the code for timeline container-->
+  <!--
+		<div class="container right">
+    <div class="content">
+		<div class="newspaper-text">
+			<h3>This is a sample header</h3>
+			<p>This is a sample text</p>
+		</div>
+    </div>
+  </div>
+  -->
 
-	<p>People find me to be an upbeat, self-motivated team player with excellent communication skills. My current experience is as a Consultant in JIRA. Earlier , I've worked as a DevOPS administrator and in backend meeting end-to-end business requirements. Love to learn things quickly, enjoy collaborating with team and constantly upgrading my knowledgebase to strengthened my technical skill set.</p>
-
-	<p>For more details on my experience, please refer to <a href="pages/work.html">work experience<a> tab. In order to get in touch with me, please click on "Contact" tab and drop your message. For my other social profiles, click on icons on the top right. Thank you for showing interest in my profile. Have a great day ahead!!!</p>
-	</div>
 </div>
-<!--Footer-->
+  </div>
+</div>
+
+<div class="newspaper-container" id="portfolio">
+  <h1>Portfolio&nbsp;&nbsp;<i class="fas fa-laptop-code"></i>&nbsp;<i class="fas fa-code"></i></h1>
+  <div class="newspaper-text">
+	<h3>* Below is the list of Clients I've worked with.</h3>
+	<div class="my-portfolio-container">
+	
+		<div class="card">
+			<a href="https://www.capgemini.com/" target="blank"><img src="assests/images/Capgemini-Symbol-700x394.png"></a>
+			<a href="https://www.capgemini.com/" target="blank">Capgemini</a>
+			<p>My current company is Capgemini and we have inhouse projects.</p>
+		</div>
+		
+		<div class="card">
+			<a href="https://www.walmart.com/" target="blank"><img src="assests/images/walmart-logo.jpg"></a>
+			<a href="https://www.walmart.com/" target="blank">Walmart</a>
+			<p>This is when I was employed with Software Business Solution and Consulting. The profile was DevOps cum JIRA Administrator.</p>
+		</div>
+		
+		<div class="card">
+			<a href="https://www.gilead.com/" target="blank"><img src="assests/images/gilead-2.svg"></a>
+			<a href="https://www.gilead.com/" target="blank">Gilead</a>
+			<p>
+				This one belongs to life-science industry. The profile was Clinical Data Management. Doctors use to research and study on various patients, so this was a critical data. As a team, we had to maintain the records of Doctors and their associates paricipating in that study. This record was maintained on their web based GUI portal  <a href="https://gilead.mdsol.com/" target="blank">RAVE</a>. Records were maintained in MS Excel, Project was tracked in Atlassian JIRA, Our Ticketing system was Jira Software. It is our team who administered our JIRA project.
+			</p>
+		</div>
+		
+		<div class="card">
+			<a href="http://www.mhaco-opsociety.org/" target="blank"><img src="assests/images/download.jpg"></a>
+			<a href="http://www.mhaco-opsociety.org/" target="blank">Co-Operative Thrift & Credit Society</a>
+			<p>
+				This was a project of Ministry of Home Affairs, India. This portal was used to maintain records of their employee's loan transaction. As a team had to take care of user's queries related with database, server alert. Making sure that the application is up and running.
+			</p>
+		</div>
+		
+		
+	</div>
+	<h3>* Below are the sample projects I'm working on.</h3>
+	<div class="my-portfolio-container">
+		<div class="card">
+			<a><img src="assests/images/html5-css3.png"></a>
+			<h3>HTML5 + CSS</h3>
+			<p>My this website itself is my live demo of my work in HTML5 and CSS. This is a static website hosted on github pages.</p>
+		</div>
+		<div class="card">
+			<a><img src="assests/images/nodejs.png"></a>
+			<h3>NODEJs</h3>
+			<p>This is the most basic REST Api code with NodeJs. It is handling two pages at the server. The code can be found <a href="https://github.com/nicks9188/nodedemo#node-docker-restapi-demo" target="blank">here</a>. <a href="http://13.233.162.151:7000/" target="blank">Live</a></p>
+		</div>
+		<div class="card">
+			<a><img src="assests/images/jenkins-pipeline-diagram.png"></a>
+			<h3>Jenkins Pipeline</h3>
+			<p>Single and Multibranch <a href="https://github.com/nicks9188/cc-nope-api-demo" target="blank">Pipeline</a> jobs. Stages are defined in Jenkinsfile. Hosted on EC2 <a href="http://13.233.162.151:8080/" target="blank">server</a>. My live <a href="http://13.233.162.151:8080/" target="blank">Jenkins</a> instance.</p>
+		</div>
+		<div class="card">
+			<a><img src="assests/images/Docker_logo_011.0.png"></a>
+			<h3>DOCKER</h3>
+			<p>Sample of running a code inside docker container. 
+			Image can be pulled by command  <span class="courier-font">docker pull nicks9188/node-docker-restapi:v1</span> 
+			Repository <a href="https://hub.docker.com/r/nicks9188/node-docker-restapi" target="blank">link</a></p>
+		</div>
+		
+		
+	</div>
+	<!--Box Sample Code-->
+	<!--
+	<div class="my-portfolio-container">
+		<div class="card">Card 1</div>
+		<div class="card">Card 2</div>
+		<div class="card">Card 3</div>
+		<div class="card">Card 4</div>
+	</div>
+	<div class="card">
+			<a><img src="assests/images/logo.png"></a>
+			<h3>Demo Header</h3>
+			<p>Demo Text</p>
+		</div>
+		<div class="card">
+			<a><img src="assests/images/logo.png"></a>
+			<h3>Demo Header</h3>
+			<p>Demo Text</p>
+		</div>
+		<div class="card">
+			<a><img src="assests/images/logo.png"></a>
+			<h3>Demo Header</h3>
+			<p>Demo Text</p>
+		</div>
+	-->
+  </div>
+</div>
+
 <footer>
-<div class="text-align: center!important;" style="padding: 100px;margin-left: 30%;margin-right 30%: ;">Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved</i> by &nbsp;&nbsp;<i class="fas fa-heartbeat"></i>&nbsp;&nbsp;<a href="#" target="_blank" style="color:white;">Nicketa</a></div>
-<!--Page Visit Counter-->
-<span id="cntr">0</span>
+    <p style="font-size: 1.1rem;line-height: 1.6; word-wrap: break-word;color:white">© <script>document.write(new Date().getFullYear())</script> 
+	Copyright by <i class="fas fa-heartbeat"></i>
+        <a style="color:white;" href="https://github.com/nicks9188" target="_blank">Nicketa</a>
+    </p>
 </footer>
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-<!--Page Visit Counter-->
-<script> 
-            function counter_fn(){
-                var counter = $('#cntr span').text(); // geting value from span
-                var count = 0;
-                count = parseInt(counter.value);
-                count = count+1;
-                counter.innerHTML = parseInt(count);
-           }
-           window.onload = counter_fn;  
+window.onload = function() {
+    if (!sessionStorage.getItem("reloaded")) {
+        sessionStorage.setItem("reloaded", "true");
+        window.location.href = "index.html"; 
+    }
+};
 </script>
 </body>
-</html> 
+</html>

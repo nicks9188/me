@@ -1,0 +1,135 @@
+.newspaper-container {
+    /*font-family: 'Times New Roman', serif;*/
+    color: #333;
+    padding: 20px 91px;
+    transition: margin-left 0.5s; /* Smooth sliding */
+    margin-bottom: 5%;
+}
+
+.newspaper-container header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.newspaper-container .article {
+    width: 95%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.newspaper-text {
+  /*font-family: 'Times New Roman', serif;*/
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+/*Skills Container Start*/
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.section.left {
+    width: 65%; /* Section 1 gets more space */
+}
+
+.section.right {
+    width: 35%; /* Section 2 is smaller */
+	background-color: #f4f4f4;
+}
+
+.section {
+    padding: 20px;
+    /* background-color: #f4f4f4;*/
+    border-radius: 8px;
+}
+/*Skills COntainer End*/
+
+
+/* Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #2E86C1;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #CFD6E1;
+}
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    td, th {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 6px; /* Decrease padding */
+    }
+}
+/*Table End*/
+
+/*My Portfolio*/
+.my-portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts dynamically */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 17px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 270px; /* Square cards */
+	overflow: hidden;
+    text-overflow: ellipsis;
+	max-width: 100%;
+    word-wrap: break-word; /* Ensures words break properly */
+	overflow-y: auto; /* Enables horizontal scrolling */
+	white-space: normal; /* Allows text wrapping */
+    /*white-space: nowrap;*/ /* Prevents text from wrapping */
+
+}
+/*Use below when want to use scroll inside a div tag*/
+.scrollable-text {
+    max-height: 120px; /* Define scrollable height */
+    overflow-y: auto; /* Enables vertical scroll */
+}
+
+.card img {
+    max-width: 100%;
+    display: block;
+	margin: 0 auto; /* Centers the image horizontally */
+	height: 100px; /* Set a fixed height */
+    width: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* Ensures the image fills the space */
+}
+.card p {
+    font-size: 16px;
+    line-height: 1.4;
+}
