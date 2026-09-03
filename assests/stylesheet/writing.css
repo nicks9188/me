@@ -1,9 +1,19 @@
 .newspaper-container {
     /*font-family: 'Times New Roman', serif;*/
-    color: #333;
+    color: var(--text-color);
     padding: 20px 91px;
-    transition: margin-left 0.5s; /* Smooth sliding */
+    transition: margin-left 0.5s, color 0.3s ease; /* Smooth sliding */
     margin-bottom: 5%;
+}
+
+.newspaper-container a {
+    color: var(--link-color);
+}
+
+@media screen and (max-width: 768px) {
+  .newspaper-container {
+    padding: 20px 20px;
+  }
 }
 
 .newspaper-container header {
@@ -24,8 +34,9 @@
   font-size: 17px;
   line-height: 1.6;
   text-align: justify;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: .5rem;
@@ -47,7 +58,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .section.right {
     width: 35%; /* Section 2 is smaller */
-	background-color: #f4f4f4;
+	background-color: var(--section-bg);
+	transition: background-color 0.3s ease;
 }
 
 .section {
@@ -56,6 +68,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border-radius: 8px;
 }
 /*Skills COntainer End*/
+
+@media screen and (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .section.left,
+  .section.right {
+    width: 100%;
+  }
+}
 
 
 /* Table */
@@ -68,16 +91,17 @@ table {
   border-collapse: collapse;
   width: 100%;
   font-size: 15px;
+  color: var(--text-color);
 }
 
 td, th {
-  border: 1px solid #2E86C1;
+  border: 1px solid var(--table-border);
   text-align: left;
   padding: 5px;
 }
 
 tr:nth-child(even) {
-  background-color: #CFD6E1;
+  background-color: var(--table-alt-bg);
 }
 @media screen and (max-width: 600px) {
     table {
@@ -101,11 +125,11 @@ tr:nth-child(even) {
 }
 
 .card {
-    background-color: #f4f4f4;
+    background-color: var(--card-bg);
     padding: 17px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--card-shadow);
     height: 270px; /* Square cards */
 	overflow: hidden;
     text-overflow: ellipsis;
@@ -114,7 +138,7 @@ tr:nth-child(even) {
 	overflow-y: auto; /* Enables horizontal scrolling */
 	white-space: normal; /* Allows text wrapping */
     /*white-space: nowrap;*/ /* Prevents text from wrapping */
-
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 /*Use below when want to use scroll inside a div tag*/
 .scrollable-text {

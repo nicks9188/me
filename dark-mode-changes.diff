@@ -1,0 +1,486 @@
+diff --git a/assests/stylesheet/style.css b/assests/stylesheet/style.css
+index 83c3848..90de2a4 100644
+--- a/assests/stylesheet/style.css
++++ b/assests/stylesheet/style.css
+@@ -1,6 +1,52 @@
+ html {
+     scroll-behavior: smooth;
+ }
++
++/* ===== Theme variables ===== */
++:root {
++  --bg-color: #ffffff;
++  --text-color: #222222;
++  --navbar-bg: #34495e;
++  --navbar-text: #f2f2f2;
++  --footer-bg: #34495e;
++  --footer-text: #ffffff;
++  --link-color: #2874a6;
++  --section-bg: #f4f4f4;
++  --card-bg: #f4f4f4;
++  --card-shadow: rgba(0, 0, 0, 0.2);
++  --table-border: #2E86C1;
++  --table-alt-bg: #CFD6E1;
++  --timeline-line: #34495e;
++  --timeline-dot-border: #FF9F55;
++  --timeline-content-bg: #f4f4f4;
++  --arrow-color: lavender;
++  --arrow-color-alt: #ffffff;
++  --toggle-hover-bg: #ddd;
++  --toggle-hover-text: #000000;
++}
++
++[data-theme="dark"] {
++  --bg-color: #121212;
++  --text-color: #e2e2e2;
++  --navbar-bg: #1b1b1b;
++  --navbar-text: #f2f2f2;
++  --footer-bg: #1b1b1b;
++  --footer-text: #e2e2e2;
++  --link-color: #7fb7ec;
++  --section-bg: #1e1e1e;
++  --card-bg: #1e1e1e;
++  --card-shadow: rgba(0, 0, 0, 0.6);
++  --table-border: #4a90d9;
++  --table-alt-bg: #26313f;
++  --timeline-line: #4a90d9;
++  --timeline-dot-border: #FF9F55;
++  --timeline-content-bg: #1e1e1e;
++  --arrow-color: #1e1e1e;
++  --arrow-color-alt: #1e1e1e;
++  --toggle-hover-bg: #333333;
++  --toggle-hover-text: #ffffff;
++}
++
+ body {
+   margin: 0;
+   font-size: 19px;
+@@ -8,6 +54,9 @@ body {
+   font-family: "Work Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
++  background-color: var(--bg-color);
++  color: var(--text-color);
++  transition: background-color 0.3s ease, color 0.3s ease;
+ }
+ .courier-font {
+     font-family: "Courier New", Courier, monospace;
+@@ -31,23 +80,40 @@ body {
+ 	line-height: 1.5; /* Lower values bring text closer */
+ }
+ 
++@media screen and (max-width: 600px) {
++  .header {
++    padding: 20px;
++    min-height: 320px;
++    background-attachment: scroll; /* fixed backgrounds can jank/flicker on mobile browsers */
++  }
++}
++
+ #navbar {
+   position: sticky;
+   top: 0;
+-  overflow: hidden;
+-  background-color: #34495e;
++  z-index: 1000;
++  display: flex;
++  align-items: center;
++  background-color: var(--navbar-bg);
+   padding-left: 10px;
+   padding-right: 10px;
++  transition: background-color 0.3s ease;
++}
++
++#nav-links {
++  display: flex;
++  flex-wrap: wrap;
++  flex: 1 1 auto;
+ }
+ 
+ #navbar a {
+-  float: left;
+   display: block;
+-  color: #f2f2f2;
++  color: var(--navbar-text);
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
++  white-space: nowrap;
+ }
+ /*For active text*/
+ #nav a:visited {
+@@ -56,8 +122,8 @@ body {
+ 
+ 
+ #navbar a:hover {
+-  background-color: #ddd;
+-  color: black;
++  background-color: var(--toggle-hover-bg);
++  color: var(--toggle-hover-text);
+ }
+ 
+ #navbar a.active {
+@@ -65,18 +131,83 @@ body {
+   color: white;
+ }
+ 
++/* Dark mode toggle button */
++#theme-toggle {
++  flex: 0 0 auto;
++  background: transparent;
++  border: none;
++  color: var(--navbar-text);
++  font-size: 18px;
++  cursor: pointer;
++  padding: 14px 16px;
++  line-height: 1;
++}
++
++#theme-toggle:hover {
++  background-color: var(--toggle-hover-bg);
++  color: var(--toggle-hover-text);
++  border-radius: 4px;
++}
++
++/* Hamburger menu button - hidden on larger screens */
++#nav-toggle {
++  display: none;
++  flex: 0 0 auto;
++  background: transparent;
++  border: none;
++  color: var(--navbar-text);
++  font-size: 20px;
++  cursor: pointer;
++  padding: 14px 16px;
++  line-height: 1;
++}
++
++#nav-toggle:hover {
++  background-color: var(--toggle-hover-bg);
++  color: var(--toggle-hover-text);
++  border-radius: 4px;
++}
++
++/* ===== Mobile navbar ===== */
++@media screen and (max-width: 768px) {
++  #navbar {
++    flex-wrap: wrap;
++  }
++
++  #nav-toggle {
++    display: block;
++  }
++
++  #nav-links {
++    display: none;
++    flex-direction: column;
++    flex-basis: 100%;
++    width: 100%;
++  }
++
++  #nav-links.open {
++    display: flex;
++  }
++
++  #navbar a {
++    width: 100%;
++    text-align: left;
++  }
++}
++
+ .content {
+   padding: 16px;
+ }
+ /* Footer */
+ footer {
+     /*background: rgba(0, 0, 0, 0.8);#2874a6*/
+-	background: #34495e ;
++	background: var(--footer-bg);
+     padding: 15px 0;
+     position: relative;
+     bottom: 0;
+     width: 100%;
+ 	text-align: center;
++	transition: background-color 0.3s ease;
+ }
+ hex-container {
+     display: flex
+diff --git a/assests/stylesheet/timeline.css b/assests/stylesheet/timeline.css
+index 068713c..e342575 100644
+--- a/assests/stylesheet/timeline.css
++++ b/assests/stylesheet/timeline.css
+@@ -15,11 +15,12 @@
+   content: '';
+   position: absolute;
+   width: 6px;
+-  background-color: #34495e;
++  background-color: var(--timeline-line);
+   top: 0;
+   bottom: 0;
+   left: 0%;
+   margin-left: -3px;
++  transition: background-color 0.3s ease;
+ }
+ 
+ /* Container around content */
+@@ -38,11 +39,12 @@
+   width: 25px;
+   height: 25px;
+   right: -17px;
+-  background-color: #34495e;
+-  border: 4px solid #FF9F55;
++  background-color: var(--timeline-line);
++  border: 4px solid var(--timeline-dot-border);
+   top: 15px;
+   border-radius: 50%;
+   z-index: 1;
++  transition: background-color 0.3s ease;
+ }
+ 
+ /* Place the container to the left */
+@@ -64,9 +66,9 @@
+   width: 0;
+   z-index: 1;
+   right: 30px;
+-  border: medium solid lavender;
++  border: medium solid var(--arrow-color);
+   border-width: 10px 0 10px 10px;
+-  border-color: transparent transparent transparent lavender;
++  border-color: transparent transparent transparent var(--arrow-color);
+ }
+ 
+ /* Add arrows to the right container (pointing left) */
+@@ -78,9 +80,9 @@
+   width: 0;
+   z-index: 1;
+   left: 30px;
+-  border: medium solid white;
++  border: medium solid var(--arrow-color-alt);
+   border-width: 10px 10px 10px 0;
+-  border-color: transparent white transparent transparent;
++  border-color: transparent var(--arrow-color-alt) transparent transparent;
+ }
+ 
+ /* Fix the circle for containers on the right side */
+@@ -92,10 +94,11 @@
+ .content {
+   padding: 20px 30px;
+   /*background-color: lavender;*/
+-  background-color: #f4f4f4;
++  background-color: var(--timeline-content-bg);
+   position: relative;
+   border-radius: 10px;
+   z-index: 2;
++  transition: background-color 0.3s ease;
+ }
+ 
+ /* Media queries - Responsive timeline on screens less than 600px wide */
+diff --git a/assests/stylesheet/writing.css b/assests/stylesheet/writing.css
+index aa04095..c79825b 100644
+--- a/assests/stylesheet/writing.css
++++ b/assests/stylesheet/writing.css
+@@ -1,11 +1,21 @@
+ .newspaper-container {
+     /*font-family: 'Times New Roman', serif;*/
+-    color: #333;
++    color: var(--text-color);
+     padding: 20px 91px;
+-    transition: margin-left 0.5s; /* Smooth sliding */
++    transition: margin-left 0.5s, color 0.3s ease; /* Smooth sliding */
+     margin-bottom: 5%;
+ }
+ 
++.newspaper-container a {
++    color: var(--link-color);
++}
++
++@media screen and (max-width: 768px) {
++  .newspaper-container {
++    padding: 20px 20px;
++  }
++}
++
+ .newspaper-container header {
+     text-align: center;
+     padding: 10px;
+@@ -24,8 +34,9 @@
+   font-size: 17px;
+   line-height: 1.6;
+   text-align: justify;
+-  color: #333;
++  color: var(--text-color);
+   margin-bottom: 20px;
++  transition: color 0.3s ease;
+ }
+ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+     margin-bottom: .5rem;
+@@ -47,7 +58,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+ 
+ .section.right {
+     width: 35%; /* Section 2 is smaller */
+-	background-color: #f4f4f4;
++	background-color: var(--section-bg);
++	transition: background-color 0.3s ease;
+ }
+ 
+ .section {
+@@ -57,6 +69,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+ }
+ /*Skills COntainer End*/
+ 
++@media screen and (max-width: 768px) {
++  .skills-container {
++    flex-direction: column;
++  }
++
++  .section.left,
++  .section.right {
++    width: 100%;
++  }
++}
++
+ 
+ /* Table */
+ .table-container {
+@@ -68,16 +91,17 @@ table {
+   border-collapse: collapse;
+   width: 100%;
+   font-size: 15px;
++  color: var(--text-color);
+ }
+ 
+ td, th {
+-  border: 1px solid #2E86C1;
++  border: 1px solid var(--table-border);
+   text-align: left;
+   padding: 5px;
+ }
+ 
+ tr:nth-child(even) {
+-  background-color: #CFD6E1;
++  background-color: var(--table-alt-bg);
+ }
+ @media screen and (max-width: 600px) {
+     table {
+@@ -101,11 +125,11 @@ tr:nth-child(even) {
+ }
+ 
+ .card {
+-    background-color: #f4f4f4;
++    background-color: var(--card-bg);
+     padding: 17px;
+     text-align: center;
+     border-radius: 8px;
+-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
++    box-shadow: 0 4px 8px var(--card-shadow);
+     height: 270px; /* Square cards */
+ 	overflow: hidden;
+     text-overflow: ellipsis;
+@@ -114,7 +138,7 @@ tr:nth-child(even) {
+ 	overflow-y: auto; /* Enables horizontal scrolling */
+ 	white-space: normal; /* Allows text wrapping */
+     /*white-space: nowrap;*/ /* Prevents text from wrapping */
+-
++	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+ }
+ /*Use below when want to use scroll inside a div tag*/
+ .scrollable-text {
+diff --git a/index.html b/index.html
+index 29de0a7..7a9009d 100644
+--- a/index.html
++++ b/index.html
+@@ -16,6 +16,15 @@
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
++<script>
++  // Apply saved/preferred theme before paint to avoid a flash of the wrong theme
++  (function () {
++    var saved = localStorage.getItem('theme');
++    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
++    var theme = saved || (prefersDark ? 'dark' : 'light');
++    document.documentElement.setAttribute('data-theme', theme);
++  })();
++</script>
+ </head>
+ <body>
+ 
+@@ -27,15 +36,26 @@
+ </div>
+ 
+ <div id="navbar">
+-    <a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
++    <a href="index.html" class="nav-brand"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
++
++    <div id="nav-links">
+ 	<a href="#about"><i class="fa-solid fa-user"></i>&nbsp;About</a>
+ 	<a href="#workexp"><i class="fa-solid fa-briefcase"></i>&nbsp;WorkExp</a>
+ 	<a href="#portfolio"><i class="fa fa-th-list"></i>&nbsp;Portfolio</a>
+ 	<a href="https://github.com/nicks9188" target="blank"><i class="fa-brands fa-github-alt"></i>&nbsp;Github</a>
+ 	<a href="https://www.linkedin.com/in/nicketak/" target="blank" id="linkedin"><i class="fa-brands fa-linkedin-in"></i>&nbsp;LinkedIn</a>
+     <a href="https://www.youtube.com/@techienicks" target="blank"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
++    </div>
++
++    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
++        <i id="theme-icon" class="fa-solid fa-moon"></i>
++    </button>
++    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" title="Menu">
++        <i id="nav-toggle-icon" class="fa-solid fa-bars"></i>
++    </button>
+ </div>
+ 
++
+ <div class="newspaper-container" id="about">
+   <h1>Welcome&nbsp;&nbsp;<i class="fa-duotone fa-solid fa-handshake"></i></h1>
+   
+@@ -388,5 +408,49 @@ window.onload = function() {
+     }
+ };
+ </script>
++<script>
++  function updateThemeIcon(theme) {
++    var icon = document.getElementById('theme-icon');
++    if (!icon) return;
++    icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
++  }
++
++  function toggleTheme() {
++    var html = document.documentElement;
++    var current = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
++    var next = current === 'dark' ? 'light' : 'dark';
++    html.setAttribute('data-theme', next);
++    localStorage.setItem('theme', next);
++    updateThemeIcon(next);
++  }
++
++  document.addEventListener('DOMContentLoaded', function () {
++    updateThemeIcon(document.documentElement.getAttribute('data-theme'));
++  });
++
++  function toggleMenu() {
++    var links = document.getElementById('nav-links');
++    var toggleBtn = document.getElementById('nav-toggle');
++    var icon = document.getElementById('nav-toggle-icon');
++    var isOpen = links.classList.toggle('open');
++    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
++    icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
++  }
++
++  // Close the mobile menu after a nav link is tapped
++  document.addEventListener('DOMContentLoaded', function () {
++    var links = document.getElementById('nav-links');
++    if (!links) return;
++    links.querySelectorAll('a').forEach(function (a) {
++      a.addEventListener('click', function () {
++        if (links.classList.contains('open')) {
++          links.classList.remove('open');
++          document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
++          document.getElementById('nav-toggle-icon').className = 'fa-solid fa-bars';
++        }
++      });
++    });
++  });
++</script>
+ </body>
+ </html>

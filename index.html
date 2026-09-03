@@ -16,6 +16,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script>
+  // Apply saved/preferred theme before paint to avoid a flash of the wrong theme
+  (function () {
+    var saved = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 </head>
 <body>
 
@@ -27,14 +36,25 @@
 </div>
 
 <div id="navbar">
-    <a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+    <a href="index.html" class="nav-brand"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+
+    <div id="nav-links">
 	<a href="#about"><i class="fa-solid fa-user"></i>&nbsp;About</a>
 	<a href="#workexp"><i class="fa-solid fa-briefcase"></i>&nbsp;WorkExp</a>
 	<a href="#portfolio"><i class="fa fa-th-list"></i>&nbsp;Portfolio</a>
 	<a href="https://github.com/nicks9188" target="blank"><i class="fa-brands fa-github-alt"></i>&nbsp;Github</a>
 	<a href="https://www.linkedin.com/in/nicketak/" target="blank" id="linkedin"><i class="fa-brands fa-linkedin-in"></i>&nbsp;LinkedIn</a>
     <a href="https://www.youtube.com/@techienicks" target="blank"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+    </div>
+
+    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i id="theme-icon" class="fa-solid fa-moon"></i>
+    </button>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" title="Menu">
+        <i id="nav-toggle-icon" class="fa-solid fa-bars"></i>
+    </button>
 </div>
+
 
 <div class="newspaper-container" id="about">
   <h1>Welcome&nbsp;&nbsp;<i class="fa-duotone fa-solid fa-handshake"></i></h1>
@@ -387,6 +407,50 @@ window.onload = function() {
         window.location.href = "index.html"; 
     }
 };
+</script>
+<script>
+  function updateThemeIcon(theme) {
+    var icon = document.getElementById('theme-icon');
+    if (!icon) return;
+    icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  }
+
+  function toggleTheme() {
+    var html = document.documentElement;
+    var current = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon(next);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updateThemeIcon(document.documentElement.getAttribute('data-theme'));
+  });
+
+  function toggleMenu() {
+    var links = document.getElementById('nav-links');
+    var toggleBtn = document.getElementById('nav-toggle');
+    var icon = document.getElementById('nav-toggle-icon');
+    var isOpen = links.classList.toggle('open');
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  }
+
+  // Close the mobile menu after a nav link is tapped
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.getElementById('nav-links');
+    if (!links) return;
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (links.classList.contains('open')) {
+          links.classList.remove('open');
+          document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+          document.getElementById('nav-toggle-icon').className = 'fa-solid fa-bars';
+        }
+      });
+    });
+  });
 </script>
 </body>
 </html>
