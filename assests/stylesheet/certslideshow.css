@@ -1,0 +1,124 @@
+/* ===== Certificate Slideshow ===== */
+.cert-slideshow {
+  position: relative;
+  max-width: 700px;
+  margin: 20px auto 10px auto;
+}
+
+.cert-slide-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-slide-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.cert-slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 20px 25px 20px;
+}
+
+.cert-slide-image {
+  width: 100%;
+  max-height: 380px;
+  object-fit: fill;
+  border-radius: 6px;
+  background-color: #eaeaea;
+  display: block;
+  margin: 0 auto;
+}
+
+.cert-slide-caption h3 {
+  margin: 16px 0 4px 0;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.cert-slide-caption p {
+  margin: 0 0 8px 0;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.cert-slide-caption a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.cert-slide-caption a:hover {
+  text-decoration: underline;
+}
+
+/* Prev / next arrows */
+.cert-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+}
+
+.cert-nav:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cert-nav.prev {
+  left: 10px;
+}
+
+.cert-nav.next {
+  right: 10px;
+}
+
+/* Dots */
+.cert-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.cert-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: var(--table-alt-bg);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cert-dot.active {
+  background-color: var(--link-color);
+}
+
+@media screen and (max-width: 600px) {
+  .cert-slide-image {
+    max-height: 240px;
+  }
+
+  .cert-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
